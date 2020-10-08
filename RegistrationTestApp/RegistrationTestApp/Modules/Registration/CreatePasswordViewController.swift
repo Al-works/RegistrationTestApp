@@ -19,7 +19,7 @@ class CreatePasswordViewController: UIViewController {
     @IBAction func submit(_ sender: Any) {
 
 //        guard let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), password.count > 6 else {
-//            let alertController: UIAlertController = .with(message: "Пожалуйста, укажите  Password")
+//            let alertController: UIAlertController = .with(message: "Please, enter Password")
 //            present(alertController, animated: true, completion: nil)
 //            return
 //        }

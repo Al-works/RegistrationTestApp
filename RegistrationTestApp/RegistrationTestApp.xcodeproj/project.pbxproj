@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0339C6D4252F931900327222 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339C6D3252F931900327222 /* LocationManager.swift */; };
+		0339C6DB252F944900327222 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339C6DA252F944900327222 /* UIViewController+Extensions.swift */; };
+		0339C6E0252F97B300327222 /* DependenciesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339C6DF252F97B300327222 /* DependenciesManager.swift */; };
+		0339C6EA252F9F4200327222 /* SampleMapStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339C6E9252F9F4200327222 /* SampleMapStyle.swift */; };
 		033CAAAB252F8B9F00CDB89C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033CAAAA252F8B9F00CDB89C /* Home.storyboard */; };
 		03668B16252F4D9E00C2D668 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03668B15252F4D9E00C2D668 /* CreatePasswordViewController.swift */; };
 		03668B19252F7D2600C2D668 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03668B18252F7D2600C2D668 /* HomeViewController.swift */; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0339C6D3252F931900327222 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		0339C6DA252F944900327222 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		0339C6DF252F97B300327222 /* DependenciesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesManager.swift; sourceTree = "<group>"; };
+		0339C6E9252F9F4200327222 /* SampleMapStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMapStyle.swift; sourceTree = "<group>"; };
 		033CAAAA252F8B9F00CDB89C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		03668B15252F4D9E00C2D668 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 		03668B18252F7D2600C2D668 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +83,57 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
+		0339C6D1252F930200327222 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0339C6DE252F97AC00327222 /* DependenciesManager */,
+				0339C6D2252F930800327222 /* Permissions */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		0339C6D2252F930800327222 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				0339C6D3252F931900327222 /* LocationManager.swift */,
+			);
+			path = Permissions;
+			sourceTree = "<group>";
+		};
+		0339C6D8252F942900327222 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				03EFA349252F451F0048A671 /* UIAlertController+Extensions.swift */,
+				0339C6DA252F944900327222 /* UIViewController+Extensions.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0339C6D9252F943300327222 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				03EFA351252F47F80048A671 /* String+Extensions.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		0339C6DE252F97AC00327222 /* DependenciesManager */ = {
+			isa = PBXGroup;
+			children = (
+				0339C6DF252F97B300327222 /* DependenciesManager.swift */,
+			);
+			path = DependenciesManager;
+			sourceTree = "<group>";
+		};
+		0339C6E3252F9ADB00327222 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				03F269A2252F3360004690C6 /* Views */,
+				03F2699E252F30E9004690C6 /* Buttons */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
 		033CAAA9252F8B9200CDB89C /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,12 +164,16 @@
 		0378565E252F28ED00EDA896 /* RegistrationTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				03F2699D252F30D3004690C6 /* ProjectUI */,
-				0378565F252F28ED00EDA896 /* AppDelegate.swift */,
-				03785661252F28ED00EDA896 /* SceneDelegate.swift */,
-				03785668252F28F000EDA896 /* Assets.xcassets */,
-				0378566A252F28F000EDA896 /* LaunchScreen.storyboard */,
+				03EFA348252F45000048A671 /* Extensions */,
+				0339C6D1252F930200327222 /* Features */,
+				03EFA340252F432D0048A671 /* Models */,
+				03EFA2EB252F394B0048A671 /* Modules */,
+				0339C6E3252F9ADB00327222 /* UI Components */,
 				0378566D252F28F000EDA896 /* Info.plist */,
+				0378566A252F28F000EDA896 /* LaunchScreen.storyboard */,
+				03785661252F28ED00EDA896 /* SceneDelegate.swift */,
+				0378565F252F28ED00EDA896 /* AppDelegate.swift */,
+				03785668252F28F000EDA896 /* Assets.xcassets */,
 			);
 			path = RegistrationTestApp;
 			sourceTree = "<group>";
@@ -138,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				03EFA341252F433D0048A671 /* UnsavedUserCredentials.swift */,
+				0339C6E9252F9F4200327222 /* SampleMapStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,22 +209,10 @@
 		03EFA348252F45000048A671 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				03EFA349252F451F0048A671 /* UIAlertController+Extensions.swift */,
-				03EFA351252F47F80048A671 /* String+Extensions.swift */,
+				0339C6D9252F943300327222 /* Foundation */,
+				0339C6D8252F942900327222 /* UI */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		03F2699D252F30D3004690C6 /* ProjectUI */ = {
-			isa = PBXGroup;
-			children = (
-				03EFA348252F45000048A671 /* Extensions */,
-				03EFA340252F432D0048A671 /* Models */,
-				03EFA2EB252F394B0048A671 /* Modules */,
-				03F269A2252F3360004690C6 /* Views */,
-				03F2699E252F30E9004690C6 /* Buttons */,
-			);
-			path = ProjectUI;
 			sourceTree = "<group>";
 		};
 		03F2699E252F30E9004690C6 /* Buttons */ = {
@@ -193,7 +245,6 @@
 				19DC831FE71E5DDC5CB924EF /* Pods-RegistrationTestApp.debug.xcconfig */,
 				652AA11CC59CB8714751C547 /* Pods-RegistrationTestApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -313,18 +364,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0339C6EA252F9F4200327222 /* SampleMapStyle.swift in Sources */,
 				03EFA352252F47F80048A671 /* String+Extensions.swift in Sources */,
 				03EFA33D252F3DFC0048A671 /* CreateNameViewController.swift in Sources */,
 				03A173AC252F879600B2DA88 /* MapViewConroller.swift in Sources */,
 				03785660252F28ED00EDA896 /* AppDelegate.swift in Sources */,
 				03F269A0252F3103004690C6 /* BorderedButton.swift in Sources */,
+				0339C6E0252F97B300327222 /* DependenciesManager.swift in Sources */,
 				03F269AB252F348E004690C6 /* DividerView.swift in Sources */,
 				03785662252F28ED00EDA896 /* SceneDelegate.swift in Sources */,
 				03EFA34A252F451F0048A671 /* UIAlertController+Extensions.swift in Sources */,
 				03EFA342252F433D0048A671 /* UnsavedUserCredentials.swift in Sources */,
 				03EFA34F252F47450048A671 /* CreateEmiailViewController.swift in Sources */,
+				0339C6DB252F944900327222 /* UIViewController+Extensions.swift in Sources */,
 				03668B16252F4D9E00C2D668 /* CreatePasswordViewController.swift in Sources */,
 				03668B19252F7D2600C2D668 /* HomeViewController.swift in Sources */,
+				0339C6D4252F931900327222 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RegistrationTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,6 +549,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RegistrationTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

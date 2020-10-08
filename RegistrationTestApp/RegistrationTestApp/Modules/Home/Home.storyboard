@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BaA-t0-9xX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -85,9 +86,43 @@
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2X1-rX-i74">
                                 <rect key="frame" x="0.0" y="800" width="414" height="96"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lz-W9-NLt" customClass="DividerView" customModule="RegistrationTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="79.5" y="69" width="58" height="3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="58" id="Kbz-3P-3fy"/>
+                                            <constraint firstAttribute="height" constant="3" id="fb3-Ce-pSi"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="B1t-wY-Bp5">
+                                        <rect key="frame" x="89" y="22" width="236" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSv-8o-G41">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="34"/>
+                                                <state key="normal" image="icon_scooter"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HH-U3-GK5">
+                                                <rect key="frame" x="91" y="0.0" width="50" height="34"/>
+                                                <state key="normal" image="icon_bicycle"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oas-81-TjT">
+                                                <rect key="frame" x="193" y="0.0" width="43" height="34"/>
+                                                <state key="normal" image="icon_scooter_black"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="LAN-dW-DDm"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="8lz-W9-NLt" firstAttribute="centerX" secondItem="cSv-8o-G41" secondAttribute="centerX" id="2JW-WZ-VCq"/>
+                                    <constraint firstItem="8lz-W9-NLt" firstAttribute="bottom" secondItem="B1t-wY-Bp5" secondAttribute="bottom" constant="16" id="FSx-hE-7bL"/>
                                     <constraint firstAttribute="height" constant="96" id="GXf-Ro-gSG"/>
+                                    <constraint firstItem="B1t-wY-Bp5" firstAttribute="top" secondItem="2X1-rX-i74" secondAttribute="top" constant="22" id="XGL-Wn-1vf"/>
+                                    <constraint firstItem="B1t-wY-Bp5" firstAttribute="centerX" secondItem="2X1-rX-i74" secondAttribute="centerX" id="fgC-fv-x6F"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -129,7 +164,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_bicycle" width="50" height="32.5"/>
         <image name="icon_free" width="26" height="20"/>
         <image name="icon_profile" width="55" height="55"/>
+        <image name="icon_scooter" width="39" height="34"/>
+        <image name="icon_scooter_black" width="43" height="33"/>
     </resources>
 </document>

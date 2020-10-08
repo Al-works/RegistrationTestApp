@@ -27,12 +27,12 @@ class CreateEmiailViewController: UIViewController {
 //        guard
 //            let email = mailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
 //            email.isEmpty == false else {
-//            showAlert(message: "Пожалуйста, укажите  Email")
+//            showAlert(message: "Please, enter Email")
 //            return
 //        }
 //
 //        guard email.isValidEmail else {
-//            showAlert(message: "Не валидный Email")
+//            showAlert(message: "Email is not valid")
 //            return
 //        }
 

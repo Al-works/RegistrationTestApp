@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jj4-25-SVJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0P-p4-nly" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Et-JG-vlk">
                                 <rect key="frame" x="188.5" y="56" width="37" height="22"/>
                                 <state key="normal" image="icon_map_hide"/>
@@ -45,7 +50,7 @@
                                 </constraints>
                                 <state key="normal" image="icon_location"/>
                                 <connections>
-                                    <action selector="findLocation:" destination="jj4-25-SVJ" eventType="touchUpInside" id="EUy-Du-3Qb"/>
+                                    <action selector="showCurrentLocation:" destination="jj4-25-SVJ" eventType="touchUpInside" id="EUy-Du-3Qb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0m-H8-rhf">
@@ -62,20 +67,25 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X19-cE-pHj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="A0P-p4-nly" firstAttribute="leading" secondItem="X19-cE-pHj" secondAttribute="leading" id="2mU-1t-ggK"/>
                             <constraint firstItem="qFr-Mh-gFn" firstAttribute="centerY" secondItem="gck-8i-8lK" secondAttribute="centerY" id="GAr-r5-yWf"/>
+                            <constraint firstAttribute="bottom" secondItem="A0P-p4-nly" secondAttribute="bottom" id="Q3h-Ex-WMj"/>
                             <constraint firstItem="gck-8i-8lK" firstAttribute="leading" secondItem="qFr-Mh-gFn" secondAttribute="trailing" constant="18" id="aFE-3C-vf2"/>
                             <constraint firstItem="1Et-JG-vlk" firstAttribute="top" secondItem="X19-cE-pHj" secondAttribute="top" constant="12" id="dse-et-ZdI"/>
                             <constraint firstItem="c0m-H8-rhf" firstAttribute="leading" secondItem="gck-8i-8lK" secondAttribute="trailing" constant="18" id="fiz-zu-Zjm"/>
                             <constraint firstItem="gck-8i-8lK" firstAttribute="centerX" secondItem="X19-cE-pHj" secondAttribute="centerX" id="jHQ-XA-Lcj"/>
+                            <constraint firstItem="A0P-p4-nly" firstAttribute="top" secondItem="bsw-4J-ZLB" secondAttribute="top" id="kWz-Hp-J0f"/>
                             <constraint firstItem="X19-cE-pHj" firstAttribute="bottom" secondItem="gck-8i-8lK" secondAttribute="bottom" constant="32" id="lKp-X0-cuc"/>
+                            <constraint firstItem="A0P-p4-nly" firstAttribute="trailing" secondItem="X19-cE-pHj" secondAttribute="trailing" id="vV2-Xl-x9g"/>
                             <constraint firstItem="1Et-JG-vlk" firstAttribute="centerX" secondItem="X19-cE-pHj" secondAttribute="centerX" id="wbp-th-RTn"/>
                             <constraint firstItem="c0m-H8-rhf" firstAttribute="centerY" secondItem="gck-8i-8lK" secondAttribute="centerY" id="xGN-E0-JaD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="locationButton" destination="qFr-Mh-gFn" id="Ets-pV-dPF"/>
+                        <outlet property="mapView" destination="A0P-p4-nly" id="3ba-Fl-ACI"/>
                         <outlet property="settingsButton" destination="c0m-H8-rhf" id="Iql-LJ-rMo"/>
                         <outlet property="unlockButton" destination="gck-8i-8lK" id="81w-NN-L4j"/>
                     </connections>

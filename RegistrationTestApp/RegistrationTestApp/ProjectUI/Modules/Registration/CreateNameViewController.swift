@@ -25,14 +25,14 @@ class CreateNameViewController: UIViewController {
         unsavedUserCredentials.firstName = firstNameTextField.text
         unsavedUserCredentials.lastName = lastNameTextField.text
 
-        switch unsavedUserCredentials.state {
-        case .unready (let message):
-            let alertController: UIAlertController = .with(message: message)
-            present(alertController, animated: true, completion: nil)
-        case .ready (_, _):
-            let strotyboard  = UIStoryboard(name: "Main", bundle: nil)
-            let vc  = strotyboard.instantiateViewController(withIdentifier: "CreateEmiailViewController")
+//        switch unsavedUserCredentials.state {
+//        case .unready (let message):
+//            let alertController: UIAlertController = .with(message: message)
+//            present(alertController, animated: true, completion: nil)
+//        case .ready (_, _):
+            let strotyboard = UIStoryboard(name: "Registration", bundle: nil)
+            let vc = strotyboard.instantiateViewController(withIdentifier: "CreateEmiailViewController")
            present(vc, animated: true, completion: nil)
-        }
+//        }
     }
 }
